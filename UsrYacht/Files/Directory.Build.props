@@ -1,5 +1,9 @@
 <Project>
 	<ItemGroup Label="Entity Files" Condition="'$(PkgPath)' != ''">
+		<Compile Include="$(PkgPath)/UsrYacht/Schemas/UsrDriveTypes/UsrDriveTypes.cs" Condition="Exists('$(PkgPath)/UsrYacht/Schemas/UsrDriveTypes/UsrDriveTypes.cs')" />
+		<Compile Include="$(PkgPath)/UsrYacht/Schemas/UsrStatus/UsrStatus.cs" Condition="Exists('$(PkgPath)/UsrYacht/Schemas/UsrStatus/UsrStatus.cs')" />
 		<Compile Include="$(PkgPath)/UsrYacht/Schemas/UsrTrafficLights/UsrTrafficLights.cs" Condition="Exists('$(PkgPath)/UsrYacht/Schemas/UsrTrafficLights/UsrTrafficLights.cs')" />
+		<Compile Include="$(PkgPath)/UsrYacht/Schemas/UsrVwContactAgeDays/UsrVwContactAgeDays.cs" Condition="Exists('$(PkgPath)/UsrYacht/Schemas/UsrVwContactAgeDays/UsrVwContactAgeDays.cs')" />
+		<Compile Include="$(PkgPath)/UsrYacht/Schemas/UsrYacht/UsrYacht.cs" Condition="Exists('$(PkgPath)/UsrYacht/Schemas/UsrYacht/UsrYacht.cs')" />
 	</ItemGroup>
 </Project>
