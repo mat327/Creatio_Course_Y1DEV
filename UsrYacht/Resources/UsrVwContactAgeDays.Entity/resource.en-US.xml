@@ -5,7 +5,7 @@
 			<Item Name="Caption" Value="VwContactAgeDays" />
 			<Item Name="Columns.UsrAgeDays.Caption" Value="Age Days" />
 			<Item Name="Columns.UsrBirthDate.Caption" Value="Birth Date" />
-			<Item Name="Columns.UsrContactId.Caption" Value="Parent contact" />
+			<Item Name="Columns.UsrContact.Caption" Value="Parent contact" />
 			<Item Name="Columns.UsrId.Caption" Value="Id" />
 			<Item Name="Columns.UsrName.Caption" Value="Name" />
 			<Item Name="EventsProcessSchema.Caption" Value="Business process" />
