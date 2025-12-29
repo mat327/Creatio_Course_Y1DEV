@@ -345,7 +345,8 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					"tooltip": "",
 					"readonly": false,
 					"multiline": false,
-					"labelPosition": "auto"
+					"labelPosition": "auto",
+					"visible": false
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
@@ -396,6 +397,87 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				"parentName": "Manager",
 				"propertyName": "listActions",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "City",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"colSpan": 1,
+						"row": 5,
+						"rowSpan": 1
+					},
+					"type": "crt.ComboBox",
+					"label": "$Resources.Strings.PDS_UsrCity_776tnrm",
+					"ariaLabel": "",
+					"isAddAllowed": true,
+					"showValueAsLink": false,
+					"labelPosition": "auto",
+					"controlActions": [],
+					"listActions": [],
+					"tooltip": "",
+					"control": "$PDS_UsrCity_776tnrm",
+					"visible": true,
+					"readonly": false,
+					"placeholder": "",
+					"valueDetails": null
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 8
+			},
+			{
+				"operation": "insert",
+				"name": "TicketPrice",
+				"values": {
+					"layoutConfig": {
+						"column": 2,
+						"colSpan": 1,
+						"row": 5,
+						"rowSpan": 1
+					},
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.PDS_UsrTicketPrice_vn586ch",
+					"control": "$PDS_UsrTicketPrice_vn586ch",
+					"readonly": false,
+					"placeholder": "",
+					"labelPosition": "auto",
+					"tooltip": "",
+					"visible": false
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 9
+			},
+			{
+				"operation": "insert",
+				"name": "Country",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"colSpan": 1,
+						"row": 6,
+						"rowSpan": 1
+					},
+					"type": "crt.ComboBox",
+					"label": "$Resources.Strings.PDS_UsrCountry_m26ltjq",
+					"ariaLabel": "",
+					"isAddAllowed": true,
+					"showValueAsLink": false,
+					"labelPosition": "auto",
+					"controlActions": [],
+					"listActions": [],
+					"tooltip": "",
+					"control": "$PDS_UsrCountry_m26ltjq",
+					"visible": true,
+					"readonly": false,
+					"placeholder": "",
+					"valueDetails": null
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 10
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -492,6 +574,47 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					"PDS_UsrNumber_leztywc": {
 						"modelConfig": {
 							"path": "PDS.UsrNumber"
+						}
+					},
+					"PDS_UsrCity_776tnrm": {
+						"modelConfig": {
+							"path": "PDS.UsrCity"
+						}
+					},
+					"PDS_UsrCity_776tnrm_List": {
+						"isCollection": true,
+						"modelConfig": {
+							"sortingConfig": {
+								"default": [
+									{
+										"columnName": "Name",
+										"direction": "asc"
+									}
+								]
+							}
+						}
+					},
+					"PDS_UsrCountry_m26ltjq": {
+						"modelConfig": {
+							"path": "PDS.UsrCountry"
+						}
+					},
+					"PDS_UsrCountry_m26ltjq_List": {
+						"isCollection": true,
+						"modelConfig": {
+							"sortingConfig": {
+								"default": [
+									{
+										"columnName": "Name",
+										"direction": "asc"
+									}
+								]
+							}
+						}
+					},
+					"PDS_UsrTicketPrice_vn586ch": {
+						"modelConfig": {
+							"path": "PDS.UsrTicketPrice"
 						}
 					}
 				}
