@@ -3,6 +3,14 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
 				"operation": "merge",
+				"name": "SaveButton",
+				"values": {
+					"size": "large",
+					"iconPosition": "only-text"
+				}
+			},
+			{
+				"operation": "merge",
 				"name": "Tabs",
 				"values": {
 					"styleType": "default",
@@ -13,6 +21,26 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					"underlineSelectedTabColor": "auto",
 					"headerBackgroundColor": "auto",
 					"allowToggleClose": true
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "GeneralInfoTabContainer",
+				"values": {
+					"gap": {
+						"columnGap": "large",
+						"rowGap": "none"
+					},
+					"visible": true,
+					"color": "transparent",
+					"borderRadius": "none",
+					"padding": {
+						"top": "none",
+						"right": "none",
+						"bottom": "large",
+						"left": "none"
+					},
+					"alignItems": "stretch"
 				}
 			},
 			{
@@ -478,6 +506,94 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
 				"index": 10
+			},
+			{
+				"operation": "insert",
+				"name": "Label_YachtRentals",
+				"values": {
+					"type": "crt.Label",
+					"caption": "#MacrosTemplateString(#ResourceString(Label_YachtRentals_caption)#)#",
+					"labelType": "headline-1-small",
+					"labelThickness": "default",
+					"labelEllipsis": false,
+					"labelColor": "#757575",
+					"labelBackgroundColor": "transparent",
+					"labelTextAlign": "start",
+					"headingLevel": "label",
+					"visible": true
+				},
+				"parentName": "GeneralInfoTab",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "DataGrid_gg73rv1",
+				"values": {
+					"type": "crt.DataGrid",
+					"features": {
+						"rows": {
+							"selection": false
+						},
+						"columns": {
+							"dragAndDrop": false,
+							"resizing": false,
+							"sorting": false
+						}
+					},
+					"items": "$DataGrid_gg73rv1",
+					"primaryColumnName": "DataGrid_gg73rv1DS_Id",
+					"columns": [
+						{
+							"id": "1a83b66b-c46d-a1f8-999b-31342d8a8811",
+							"code": "DataGrid_gg73rv1DS_UsrRentalStart",
+							"caption": "#ResourceString(DataGrid_gg73rv1DS_UsrRentalStart)#",
+							"dataValueType": 8,
+							"width": 159
+						},
+						{
+							"id": "866617bc-e97f-2158-a696-7ab4993f51c0",
+							"code": "DataGrid_gg73rv1DS_UsrRentalEnd",
+							"caption": "#ResourceString(DataGrid_gg73rv1DS_UsrRentalEnd)#",
+							"dataValueType": 8,
+							"width": 148
+						},
+						{
+							"id": "3251e9d0-515f-724e-3165-faa8fa1220fa",
+							"code": "DataGrid_gg73rv1DS_UsrCustomer",
+							"caption": "#ResourceString(DataGrid_gg73rv1DS_UsrCustomer)#",
+							"dataValueType": 10,
+							"width": 199
+						},
+						{
+							"id": "d9d8ce16-914c-698b-eb45-33a33ab175e5",
+							"code": "DataGrid_gg73rv1DS_UsrManager",
+							"caption": "#ResourceString(DataGrid_gg73rv1DS_UsrManager)#",
+							"dataValueType": 10,
+							"width": 202
+						},
+						{
+							"id": "54cbafed-dd92-ddd3-cba5-e36c6578fe34",
+							"code": "DataGrid_gg73rv1DS_UsrTotalPrice",
+							"caption": "#ResourceString(DataGrid_gg73rv1DS_UsrTotalPrice)#",
+							"dataValueType": 32,
+							"width": 190
+						},
+						{
+							"id": "6e76642c-9066-6ca2-a70b-9e270808d11a",
+							"code": "DataGrid_gg73rv1DS_UsrComment",
+							"caption": "#ResourceString(DataGrid_gg73rv1DS_UsrComment)#",
+							"dataValueType": 28,
+							"width": 228
+						}
+					],
+					"placeholder": false,
+					"visible": true,
+					"fitContent": true
+				},
+				"parentName": "GeneralInfoTab",
+				"propertyName": "items",
+				"index": 2
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -634,6 +750,68 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 						"modelConfig": {
 							"path": "PDS.UsrTicketPrice"
 						}
+					},
+					"DataGrid_gg73rv1": {
+						"isCollection": true,
+						"modelConfig": {
+							"path": "DataGrid_gg73rv1DS",
+							"filterAttributes": [
+								{
+									"loadOnChange": true,
+									"name": "DataGrid_gg73rv1_PredefinedFilter"
+								}
+							],
+							"sortingConfig": {
+								"default": [
+									{
+										"direction": "asc",
+										"columnName": "UsrRentalStart"
+									}
+								]
+							}
+						},
+						"viewModelConfig": {
+							"attributes": {
+								"DataGrid_gg73rv1DS_UsrRentalStart": {
+									"modelConfig": {
+										"path": "DataGrid_gg73rv1DS.UsrRentalStart"
+									}
+								},
+								"DataGrid_gg73rv1DS_UsrRentalEnd": {
+									"modelConfig": {
+										"path": "DataGrid_gg73rv1DS.UsrRentalEnd"
+									}
+								},
+								"DataGrid_gg73rv1DS_UsrCustomer": {
+									"modelConfig": {
+										"path": "DataGrid_gg73rv1DS.UsrCustomer"
+									}
+								},
+								"DataGrid_gg73rv1DS_UsrManager": {
+									"modelConfig": {
+										"path": "DataGrid_gg73rv1DS.UsrManager"
+									}
+								},
+								"DataGrid_gg73rv1DS_UsrTotalPrice": {
+									"modelConfig": {
+										"path": "DataGrid_gg73rv1DS.UsrTotalPrice"
+									}
+								},
+								"DataGrid_gg73rv1DS_UsrComment": {
+									"modelConfig": {
+										"path": "DataGrid_gg73rv1DS.UsrComment"
+									}
+								},
+								"DataGrid_gg73rv1DS_Id": {
+									"modelConfig": {
+										"path": "DataGrid_gg73rv1DS.Id"
+									}
+								}
+							}
+						}
+					},
+					"DataGrid_gg73rv1_PredefinedFilter": {
+						"value": null
 					}
 				}
 			},
@@ -654,7 +832,15 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				"operation": "merge",
 				"path": [],
 				"values": {
-					"primaryDataSourceName": "PDS"
+					"primaryDataSourceName": "PDS",
+					"dependencies": {
+						"DataGrid_gg73rv1DS": [
+							{
+								"attributePath": "UsrParentYacht",
+								"relationPath": "PDS.Id"
+							}
+						]
+					}
 				}
 			},
 			{
@@ -669,6 +855,33 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 							"entitySchemaName": "UsrYacht"
 						},
 						"scope": "page"
+					},
+					"DataGrid_gg73rv1DS": {
+						"type": "crt.EntityDataSource",
+						"scope": "viewElement",
+						"config": {
+							"entitySchemaName": "UsrYachtRentals",
+							"attributes": {
+								"UsrRentalStart": {
+									"path": "UsrRentalStart"
+								},
+								"UsrRentalEnd": {
+									"path": "UsrRentalEnd"
+								},
+								"UsrCustomer": {
+									"path": "UsrCustomer"
+								},
+								"UsrManager": {
+									"path": "UsrManager"
+								},
+								"UsrTotalPrice": {
+									"path": "UsrTotalPrice"
+								},
+								"UsrComment": {
+									"path": "UsrComment"
+								}
+							}
+						}
 					}
 				}
 			}
