@@ -495,11 +495,29 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					"PDS_UsrPrice_i63oghh": {
 						"modelConfig": {
 							"path": "PDS.UsrPrice"
+						},
+						"validators": {
+							"MaxPriceValidator": {
+								"type": "usr.MBValidator",
+								"params": {
+									"maxValue": 100000,
+									"message": "#ResourceString(PriceCannotExceed)#"
+								}
+							}
 						}
 					},
 					"PDS_UsrLength_q2ual94": {
 						"modelConfig": {
 							"path": "PDS.UsrLength"
+						},
+						"validators": {
+							"MaxLengthValidator": {
+								"type": "usr.MBValidator",
+								"params": {
+									"maxValue": 5000,
+									"message": "#ResourceString(LengthCannotExceed)#"
+								}
+							}
 						}
 					},
 					"PDS_UsrCrewCount_3c6nnpt": {
@@ -676,9 +694,54 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					/* Call the next handler if it exists and return its result. */
 					return next?.handle(request);
 				}
-			}
+			},
+			{
+				request: "crt.HandleViewModelAttributeChangeRequest",
+				/* The custom implementation of the system query handler. */
+				handler: async (request, next) => {
+      				if (request.attributeName === 'PDS_UsrPrice_i63oghh' || 		        // if price changed
+					   request.attributeName === 'PDS_UsrPassengersCount_f09rjo6' ) { 		// or Passenger count changed
+						let price = await request.$context.PDS_UsrPrice_i63oghh;
+						let passengers = await request.$context.PDS_UsrPassengersCount_f09rjo6;
+						let ticket_price = price / passengers;
+						request.$context.PDS_UsrTicketPrice_vn586ch = ticket_price;
+					}
+					/* Call the next handler if it exists and return its result. */
+					return next?.handle(request);
+				}
+			},		
 		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
-		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/
+		validators: /**SCHEMA_VALIDATORS*/{
+			"usr.MBValidator": {
+				validator: function (config) {
+					return function (control) {
+						let value = control.value;
+						let maxValue = config.maxValue;
+						let valueIsCorrect = value <= maxValue;
+						var result;
+						if (valueIsCorrect) {
+							result = null;
+						} else {
+							result = {
+								"usr.MBValidator": { 
+									message: config.message
+								}
+							};
+						}
+						return result;
+					};
+				},
+				params: [
+					{
+						name: "maxValue"
+					},
+					{
+						name: "message"
+					}
+				],
+				async: false
+			}
+		}/**SCHEMA_VALIDATORS*/
 	};
 });

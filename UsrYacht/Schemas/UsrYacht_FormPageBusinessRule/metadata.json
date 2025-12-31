@@ -177,7 +177,8 @@
                 "BRT1": "PDS_UsrStatus_8p1gl76"
               }
             ],
-            "BR3": "BusinessRule_8d7944d"
+            "BR3": "BusinessRule_8d7944d",
+            "BR4": false
           },
           {
             "JI0": "Terrasoft.Core.BusinessRules.BusinessRule",
@@ -233,7 +234,8 @@
                 "BRT1": "PDS_UsrStatus_8p1gl76"
               }
             ],
-            "BR3": "BusinessRule_6ebe086"
+            "BR3": "BusinessRule_6ebe086",
+            "BR4": false
           }
         ]
       }

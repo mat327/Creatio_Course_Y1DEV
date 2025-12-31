@@ -9,7 +9,9 @@
 			<Item Name="LocalizableStrings.addRecord_kequtgt_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_ll8vxez_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_uvvsf23_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.LengthCannotExceed.Value" Value="The length of the yacht cannot exceed 5000." />
 			<Item Name="LocalizableStrings.MyButton_caption.Value" Value="My button" />
+			<Item Name="LocalizableStrings.PriceCannotExceed.Value" Value="The price per day cannot exceed 100,000." />
 		</Items>
 	</Group>
 </Resources>
