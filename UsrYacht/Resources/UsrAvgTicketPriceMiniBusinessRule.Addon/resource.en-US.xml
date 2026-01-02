@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="AddonConfig.Rules.deabb73e-2a1c-131f-42e0-a28cc7cbbf4a.Caption" Value="Show elements: Price Too High Text" />
+			<Item Name="Caption" Value="AvgTicketPriceMini (Business rules)" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="AvgTicketPriceMini" />
+			<Item Name="LocalizableStrings.PriceTooHighText_label.Value" Value="Notice" />
+			<Item Name="Parameters.26d308fd-14a7-1032-c092-0d0e17ed343e.Caption" Value="Price Too High Text" />
+			<Item Name="Parameters.7a4cb17d-5875-c2c7-157b-8935a4a3390c.Caption" Value="Avg Ticket Price" />
+			<Item Name="Parameters.ddca4848-d963-f73d-d695-b8fa28808a73.Caption" Value="SQL text" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "14cade37-ec43-46f7-814b-7d26ad8facfe",
+    "Name": "UsrAvgTicketPriceMiniBusinessRule",
+    "ModifiedOnUtc": "\/Date(1767361934000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "AvgTicketPriceMini (Business rules)",
+    "DependsOn": []
+  }
+}

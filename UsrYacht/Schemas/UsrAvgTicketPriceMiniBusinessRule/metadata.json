@@ -1,0 +1,79 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "14cade37-ec43-46f7-814b-7d26ad8facfe",
+      "A2": "UsrAvgTicketPriceMiniBusinessRule",
+      "A5": "9a31d3b2-db46-42fd-a3f5-4b997d8744c7",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "6efbb3a2-b75b-4495-b3c2-112d244d7117",
+      "B8": "8.3.1.4437",
+      "AD1": "d9b754c5-d0fd-40fc-8e87-2d2d3288105f",
+      "AD2": "ClientUnitSchemaManager",
+      "AD3": "BusinessRule",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+        "JI0": "Terrasoft.Core.BusinessRules.BusinessRules",
+        "BRS1": [
+          {
+            "JI0": "Terrasoft.Core.BusinessRules.BusinessRule",
+            "UId": "deabb73e-2a1c-131f-42e0-a28cc7cbbf4a",
+            "BR1": [
+              {
+                "JI0": "Terrasoft.Core.BusinessRules.Models.BusinessRuleCase",
+                "UId": "6201d1b5-f9a5-6209-6646-2c64d55af45f",
+                "BRC1": {
+                  "JI0": "Terrasoft.Core.BusinessRules.Models.Conditions.BusinessRuleGroupCondition",
+                  "UId": "da51b43b-6c13-bdf1-7d63-12e463301f6a",
+                  "BGC1": 1,
+                  "BGC2": [
+                    {
+                      "JI0": "Terrasoft.Core.BusinessRules.Models.Conditions.BusinessRuleCondition",
+                      "UId": "561dbd7a-1cd8-770f-5aa5-9494196514bf",
+                      "BCO1": {
+                        "JI0": "Terrasoft.Core.BusinessRules.Models.Expressions.BusinessRuleAttributeExpression",
+                        "UId": "0ea4118a-8869-50b9-6672-5badf544d5a4",
+                        "BRE1": "MediumText",
+                        "BRE2": "AttributeValue",
+                        "BRX1": "PageParameters_UsrTextParameter1_ygcdqxu"
+                      },
+                      "BCO2": {
+                        "JI0": "Terrasoft.Core.BusinessRules.Models.Expressions.BusinessRuleValueExpression",
+                        "UId": "ba4b9d76-060d-d516-7dfa-df6126fe4842",
+                        "BRE1": "MediumText",
+                        "BVE1": "Price too high"
+                      },
+                      "BCO3": 2
+                    }
+                  ]
+                },
+                "BRC2": [
+                  {
+                    "JI0": "Terrasoft.Core.BusinessRules.Models.Actions.BusinessRuleActionShowElement",
+                    "UId": "816474e8-3adf-b545-f82c-b6c401225bd4",
+                    "BRA4": "PriceTooHighText"
+                  }
+                ]
+              }
+            ],
+            "BR2": [
+              {
+                "JI0": "Terrasoft.Core.BusinessRules.Models.Trigger",
+                "UId": "3d7bf7e2-d8fc-ba36-0f73-5c14f91bebde",
+                "BRT2": 2
+              },
+              {
+                "JI0": "Terrasoft.Core.BusinessRules.Models.Trigger",
+                "UId": "bbfe5db6-e9bd-bf99-3afe-79862b00399d",
+                "BRT1": "PageParameters_UsrTextParameter1_ygcdqxu"
+              }
+            ],
+            "BR3": "BusinessRule_dac173f"
+          }
+        ]
+      }
+    }
+  }
+}
