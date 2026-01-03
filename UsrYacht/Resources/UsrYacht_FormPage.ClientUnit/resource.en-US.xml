@@ -10,6 +10,7 @@
 			<Item Name="LocalizableStrings.addRecord_kequtgt_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_ll8vxez_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_uvvsf23_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.AvgPriceService_caption.Value" Value="Avg Price Serv" />
 			<Item Name="LocalizableStrings.CalcAvgTicketPrice_caption.Value" Value="Calc avg ticket price" />
 			<Item Name="LocalizableStrings.Label_YachtRentals_caption.Value" Value="Yacht Rentals" />
 			<Item Name="LocalizableStrings.LengthCannotExceed.Value" Value="The length of the yacht cannot exceed 5000." />
