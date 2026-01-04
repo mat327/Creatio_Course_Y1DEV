@@ -115,12 +115,27 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 					"caption": "#ResourceString(AvgPriceService_caption)#",
 					"visible": true,
 					"clicked": {
-						"request": "usr.RunWebServiceRequest"
+						"request": "usr.RunWebServiceRequestAvg"
 					}
 				},
 				"parentName": "Action",
 				"propertyName": "menuItems",
 				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "MinPriceService",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(MinPriceService_caption)#",
+					"visible": true,
+					"clicked": {
+						"request": "usr.RunWebServiceRequestMin"
+					}
+				},
+				"parentName": "Action",
+				"propertyName": "menuItems",
+				"index": 2
 			},
 			{
 				"operation": "insert",
@@ -980,7 +995,7 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 				}
 			},
 			{
-				request: "usr.RunWebServiceRequest",
+				request: "usr.RunWebServiceRequestAvg",
 				/* Implementation of the custom query handler. */
 				handler: async (request, next) => {
 					console.log("Run web service button works...");
@@ -1008,6 +1023,32 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 					const response = await httpClientService.post(endpoint, params);
 					
 					console.log("response avg price = " + response.body.GetAvgPriceByDriveTypeIdResult);
+					
+					/* Call the next handler if it exists and return its result. */
+					return next?.handle(request);
+				}
+			},
+			{
+				request: "usr.RunWebServiceRequestMin",
+				/* Implementation of the custom query handler. */
+				handler: async (request, next) => {
+					console.log("Run web service button works...");
+
+					/* Create an instance of the HTTP client from @creatio-devkit/common. */
+					const httpClientService = new sdk.HttpClientService();
+					/* Specify the URL to run web service method. */
+					const baseUrl = Terrasoft.utils.uri.getConfigurationWebServiceBaseUrl();
+					const transferName = "rest";
+					const serviceName = "YachtService";
+					const methodName = "GetMinPrice";
+					const endpoint = Terrasoft.combinePath(baseUrl, transferName, serviceName, methodName);
+					
+					//const endpoint = "http://localhost/Y1DEV/0/rest/YachtService/GetMinPrice";
+					/* Send a POST HTTP request. The HTTP client converts the response body from JSON to a JS object automatically. */
+					var params = {};
+					const response = await httpClientService.post(endpoint, params);
+					
+					console.log("response min price = " + response.body.GetMinPriceResult);
 					
 					/* Call the next handler if it exists and return its result. */
 					return next?.handle(request);

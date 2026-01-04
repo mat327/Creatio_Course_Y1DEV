@@ -14,6 +14,7 @@
 			<Item Name="LocalizableStrings.CalcAvgTicketPrice_caption.Value" Value="Calc avg ticket price" />
 			<Item Name="LocalizableStrings.Label_YachtRentals_caption.Value" Value="Yacht Rentals" />
 			<Item Name="LocalizableStrings.LengthCannotExceed.Value" Value="The length of the yacht cannot exceed 5000." />
+			<Item Name="LocalizableStrings.MinPriceService_caption.Value" Value="Min Price Serv" />
 			<Item Name="LocalizableStrings.MyButton_caption.Value" Value="My button" />
 			<Item Name="LocalizableStrings.PriceCannotExceed.Value" Value="The price per day cannot exceed 100,000." />
 		</Items>
