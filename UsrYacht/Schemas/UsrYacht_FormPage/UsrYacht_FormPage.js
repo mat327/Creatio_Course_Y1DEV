@@ -139,6 +139,28 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SCHEMA_
 			},
 			{
 				"operation": "insert",
+				"name": "AddYachtRental",
+				"values": {
+					"type": "crt.MenuItem",
+					"caption": "#ResourceString(AddYachtRental_caption)#",
+					"visible": true,
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "UsrAddYachtRental",
+							"processRunType": "ForTheSelectedPage",
+							"saveAtProcessStart": true,
+							"showNotification": true,
+							"recordIdProcessParameterName": "YachtId"
+						}
+					}
+				},
+				"parentName": "Action",
+				"propertyName": "menuItems",
+				"index": 3
+			},
+			{
+				"operation": "insert",
 				"name": "MyButton",
 				"values": {
 					"type": "crt.Button",
