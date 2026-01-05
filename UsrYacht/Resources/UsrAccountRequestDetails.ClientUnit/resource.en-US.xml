@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Account Request Details" />
+			<Item Name="LocalizableStrings.PageTitle_caption.Value" Value="Request details" />
+			<Item Name="LocalizableStrings.SaveButton_caption.Value" Value="Ok" />
+			<Item Name="Parameters.0f674abe-eb7c-9910-baee-623e00889fad.Caption" Value="Country (2 letters ISO)" />
+			<Item Name="Parameters.d319ccc2-03de-c5b2-0e48-51d6c3d122eb.Caption" Value="Company name" />
+		</Items>
+	</Group>
+</Resources>

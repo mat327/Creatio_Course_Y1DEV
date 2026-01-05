@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "c4f9433b-7825-4585-92c1-b518ec20fadf",
+    "Name": "UsrAddAccount",
+    "ModifiedOnUtc": "\/Date(1767615217000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "AddAccount",
+    "DependsOn": []
+  }
+}

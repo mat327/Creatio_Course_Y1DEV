@@ -1,0 +1,7 @@
+﻿{
+  "Properties": {
+    "BaseUri": "https://api.service.dnb.com",
+    "CreatedInVersion": "8.3.1.4437",
+    "Type": "Rest"
+  }
+}

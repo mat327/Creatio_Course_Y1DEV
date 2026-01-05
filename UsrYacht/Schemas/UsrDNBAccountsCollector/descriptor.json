@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "03dd2e5f-51a5-4b40-833c-9fc4b3dfa056",
+    "Name": "UsrDNBAccountsCollector",
+    "ModifiedOnUtc": "\/Date(1767610596000)\/",
+    "ManagerName": "ServiceSchemaManager",
+    "Caption": "DNBAccountsCollector",
+    "DependsOn": []
+  }
+}

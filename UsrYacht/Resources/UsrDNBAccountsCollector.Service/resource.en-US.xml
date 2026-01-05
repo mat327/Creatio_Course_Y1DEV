@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="DNBAccountsCollector" />
+			<Item Name="ServiceMethods.UsrGetAccounts.Caption" Value="GetAccounts" />
+			<Item Name="ServiceMethods.UsrGetAccounts.Request.Parameters.UsrCCode.Caption" Value="CountryCode" />
+			<Item Name="ServiceMethods.UsrGetAccounts.Request.Parameters.UsrPName.Caption" Value="PrimaryName" />
+			<Item Name="ServiceMethods.UsrGetAccounts.Response.Parameters.UsrCompanies.Caption" Value="Companies" />
+			<Item Name="ServiceMethods.UsrGetAccounts.Response.Parameters.UsrCompanies.ItemProperties.UsrCCName.Caption" Value="CompanyName" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "d1f7e1e6-0beb-495b-bff6-88c131c923aa",
+    "Name": "UsrAccountRequestDetails",
+    "ModifiedOnUtc": "\/Date(1767611857000)\/",
+    "Parent": {
+      "UId": "ecdcc8ff-272c-4957-9381-7d74ce17e140",
+      "Name": "BaseMiniPageTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Account Request Details"
+  }
+}
